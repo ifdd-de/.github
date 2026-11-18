@@ -12,9 +12,12 @@ produced, and integration happens through shared meaning instead of shared stora
 
 - **Domains keep their data.** Every domain — a team, a system, a person — publishes
   its own records from its own endpoint and stays responsible for them.
-- **A shared schema replaces a shared system.** Records are validated against a
-  published LinkML schema and served as JSON-LD, so a YAML file, a Django service and
-  an ERP system can take part in the same federation.
+- **A shared schema replaces a shared system.** Records are checked against published
+  JSON-LD contexts and vocabularies and served as JSON-LD, so a YAML file, a Django
+  service and an ERP system can take part in the same federation. A template that
+  generates these descriptions from a LinkML schema exists as a prototype
+  ([`model`](https://github.com/ifdd-de/model), see
+  [ADR 0003](https://github.com/ifdd-de/overview/blob/main/docs/decisions/0003-linkml-as-source-of-the-model.md)).
 - **Identity is separate from location.** Identifiers are permanent addresses; hosts
   are operational addresses that may change. That separation is what makes the whole
   federation survive reorganisation.
